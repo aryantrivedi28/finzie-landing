@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { supabase } from '../lib/supabaseClient';
 
 export default function FormPage() {
   const [step, setStep] = useState(1);
@@ -25,10 +26,27 @@ export default function FormPage() {
     setStep((prev) => prev - 1);
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    setStep(5); // Show Instant Options
+  
+    const { data, error } = await supabase.from('projects').insert([
+      {
+        service_category: serviceCategory,
+        specific_service: specificService,
+        project_details: details,
+        industry: industry,
+      },
+    ]);
+  
+    if (error) {
+      console.error('Error saving project:', error.message);
+      alert('Failed to submit. Please try again.');
+    } else {
+      console.log('Project submitted:', data);
+      setStep(5); // Go to instant results page
+    }
   }
+  
 
   return (
     <main className="min-h-screen bg-[#F5F5F5] py-16 px-6 text-center">
