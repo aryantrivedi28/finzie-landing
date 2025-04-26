@@ -32,13 +32,13 @@ export default function FormPage() {
 
   return (
     <main className="min-h-screen bg-[#F5F5F5] py-16 px-6 text-center">
-      <h1 className="text-4xl font-bold mb-10">Start Your Project</h1>
+      <h1 className="text-4xl font-bold mb-10 text-gray-900">Start Your Project</h1>
 
       <form onSubmit={handleSubmit} className="max-w-xl mx-auto bg-white p-8 rounded-xl shadow">
 
         {step === 1 && (
           <>
-            <h2 className="text-2xl font-semibold mb-6">What type of service do you need?</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-900">What type of service do you need?</h2>
             <div className="flex flex-wrap gap-4 justify-center">
               {Object.keys(serviceOptions).map((category) => (
                 <button
@@ -56,7 +56,7 @@ export default function FormPage() {
 
         {step === 2 && (
           <>
-            <h2 className="text-2xl font-semibold mb-6">What specifically do you want?</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-900">What specifically do you want?</h2>
             <div className="flex flex-wrap gap-4 justify-center">
               {serviceOptions[serviceCategory as keyof typeof serviceOptions].map((service) => (
                 <button
@@ -75,12 +75,12 @@ export default function FormPage() {
 
         {step === 3 && (
           <>
-            <h2 className="text-2xl font-semibold mb-6">Give a few details</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-900">Give a few details</h2>
             <textarea
               placeholder="Describe briefly what you need (eg: I need a modern logo for a SaaS startup)"
               value={details}
               onChange={(e) => setDetails(e.target.value)}
-              className="w-full border p-4 rounded mb-6"
+              className="w-full border p-4 rounded mb-6 text-gray-800"
               rows={4}
               required
             />
@@ -93,11 +93,11 @@ export default function FormPage() {
 
         {step === 4 && (
           <>
-            <h2 className="text-2xl font-semibold mb-6">Select Your Industry</h2>
+            <h2 className="text-2xl font-semibold mb-6 text-gray-900">Select Your Industry</h2>
             <select
               value={industry}
               onChange={(e) => setIndustry(e.target.value)}
-              className="w-full border p-3 rounded mb-6"
+              className="w-full border p-3 rounded mb-6 text-gray-800"
               required
             >
               <option value="">Select Industry</option>
@@ -120,15 +120,15 @@ export default function FormPage() {
 
         {step === 5 && (
           <>
-            <h2 className="text-2xl font-bold mb-6">Here’s how we can execute your project 🚀</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gray-900">Here’s how we can execute your project 🚀</h2>
 
             <div className="grid md:grid-cols-2 gap-8 text-left">
               {/* Option 1 */}
               <div className="bg-[#FFF8E1] p-6 rounded-xl shadow">
-                <h3 className="text-xl font-semibold mb-2">AI Tool + Freelancer Combo</h3>
-                <p className="text-gray-700 mb-4">Fastest delivery using AI tools + trained freelancers. Best for simple, urgent projects.</p>
-                <p className="font-bold mb-2">⚡ Delivery: Few hours</p>
-                <p className="font-bold mb-2">💰 Cost: Affordable</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">AI Tool + Freelancer Combo</h3>
+                <p className="text-gray-800 mb-4">Fastest delivery using AI tools + trained freelancers. Best for simple, urgent projects.</p>
+                <p className="font-bold mb-2 text-gray-900">⚡ Delivery: Few hours</p>
+                <p className="font-bold mb-2 text-gray-900">💰 Cost: Affordable</p>
                 <button className="mt-4 bg-[#FFC107] hover:bg-[#ffb300] px-6 py-2 rounded font-semibold">
                   Choose This
                 </button>
@@ -136,10 +136,10 @@ export default function FormPage() {
 
               {/* Option 2 */}
               <div className="bg-white p-6 rounded-xl shadow">
-                <h3 className="text-xl font-semibold mb-2">Dedicated Vetted Freelancer</h3>
-                <p className="text-gray-700 mb-4">Get a specialized expert to work closely on your project end-to-end.</p>
-                <p className="font-bold mb-2">⏳ Delivery: Few days</p>
-                <p className="font-bold mb-2">💰 Cost: Premium</p>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">Dedicated Vetted Freelancer</h3>
+                <p className="text-gray-800 mb-4">Get a specialized expert to work closely on your project end-to-end.</p>
+                <p className="font-bold mb-2 text-gray-900">⏳ Delivery: Few days</p>
+                <p className="font-bold mb-2 text-gray-900">💰 Cost: Premium</p>
                 <button className="mt-4 bg-[#1A1A1A] text-white hover:bg-black px-6 py-2 rounded font-semibold">
                   Choose This
                 </button>
@@ -152,3 +152,4 @@ export default function FormPage() {
     </main>
   );
 }
+git add .

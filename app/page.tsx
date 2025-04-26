@@ -6,7 +6,7 @@ export default function Home() {
         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
           Your Shortcut to Fast, Affordable Startup Execution
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+        <p className="text-lg text-gray-800 max-w-2xl mx-auto mb-8">
           Instantly match with AI tools + vetted freelancers for design, development, and growth. Get results in hours, not weeks.
         </p>
         <a href="/form" className="inline-block bg-[#FFC107] hover:bg-[#ffb300] text-black font-semibold px-8 py-3 rounded-xl">
@@ -20,18 +20,18 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           <div className="bg-[#F1F1F1] p-6 rounded-xl hover:shadow-lg transition">
             <h3 className="text-xl font-semibold mb-2">Services</h3>
-            <p className="text-gray-600 mb-4">Design, Develop, Create — with AI-powered efficiency.</p>
-            <a href="#form" className="text-[#FFC107] font-bold">Explore Services →</a>
+            <p className="text-gray-800 mb-4">Design, Develop, Create — with AI-powered efficiency.</p>
+            <a href="/form" className="text-[#FFC107] font-bold">Explore Services →</a>
           </div>
           <div className="bg-[#F1F1F1] p-6 rounded-xl hover:shadow-lg transition">
             <h3 className="text-xl font-semibold mb-2">AI Tools</h3>
-            <p className="text-gray-600 mb-4">Leverage the best AI tools for logos, websites, marketing & more.</p>
-            <a href="#form" className="text-[#FFC107] font-bold">Explore Tools →</a>
+            <p className="text-gray-800 mb-4">Leverage the best AI tools for logos, websites, marketing & more.</p>
+            <a href="/form" className="text-[#FFC107] font-bold">Explore Tools →</a>
           </div>
           <div className="bg-[#F1F1F1] p-6 rounded-xl hover:shadow-lg transition">
             <h3 className="text-xl font-semibold mb-2">Startup Packages</h3>
-            <p className="text-gray-600 mb-4">Pre-made launch kits for fast go-to-market success.</p>
-            <a href="#form" className="text-[#FFC107] font-bold">Explore Packages →</a>
+            <p className="text-gray-800 mb-4">Pre-made launch kits for fast go-to-market success.</p>
+            <a href="/form" className="text-[#FFC107] font-bold">Explore Packages →</a>
           </div>
         </div>
       </section>
@@ -42,15 +42,15 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-left">
           <div>
             <h3 className="text-xl font-semibold mb-2">1. Start a Project</h3>
-            <p className="text-gray-600">Tell us what you need via quick guided questions.</p>
+            <p className="text-gray-800">Tell us what you need via quick guided questions.</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">2. Get Instant Options</h3>
-            <p className="text-gray-600">AI package vs Vetted freelancer — pick your execution plan.</p>
+            <p className="text-gray-800">AI package vs Vetted freelancer — pick your execution plan.</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">3. Track and Get Delivered</h3>
-            <p className="text-gray-600">Track progress and get results — fast, simple, efficient.</p>
+            <p className="text-gray-800">Track progress and get results — fast, simple, efficient.</p>
           </div>
         </div>
       </section>
@@ -60,11 +60,11 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-gray-900 mb-10">What Founders Say</h2>
         <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto text-left">
           <div className="bg-white p-6 rounded-xl shadow">
-            <p className="text-gray-700 italic">"Got a designer, dev & video editor in 48 hours. Delivery was flawless."</p>
+            <p className="text-gray-800 italic">"Got a designer, dev & video editor in 48 hours. Delivery was flawless."</p>
             <p className="mt-4 font-bold text-gray-900">— SaaS Startup Founder</p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow">
-            <p className="text-gray-700 italic">"Finzie is like having an in-house team without the hiring headache."</p>
+            <p className="text-gray-800 italic">"Finzie is like having an in-house team without the hiring headache."</p>
             <p className="mt-4 font-bold text-gray-900">— D2C Brand Owner</p>
           </div>
         </div>
