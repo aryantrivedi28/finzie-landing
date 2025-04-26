@@ -19,17 +19,17 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-gray-900 mb-12">Explore What You Need</h2>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           <div className="bg-[#F1F1F1] p-6 rounded-xl hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">Services</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900">Services</h3>
             <p className="text-gray-800 mb-4">Design, Develop, Create — with AI-powered efficiency.</p>
             <a href="/form" className="text-[#FFC107] font-bold">Explore Services →</a>
           </div>
           <div className="bg-[#F1F1F1] p-6 rounded-xl hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">AI Tools</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900">AI Tools</h3>
             <p className="text-gray-800 mb-4">Leverage the best AI tools for logos, websites, marketing & more.</p>
             <a href="/form" className="text-[#FFC107] font-bold">Explore Tools →</a>
           </div>
           <div className="bg-[#F1F1F1] p-6 rounded-xl hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">Startup Packages</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900">Startup Packages</h3>
             <p className="text-gray-800 mb-4">Pre-made launch kits for fast go-to-market success.</p>
             <a href="/form" className="text-[#FFC107] font-bold">Explore Packages →</a>
           </div>
@@ -41,15 +41,15 @@ export default function Home() {
         <h2 className="text-3xl font-bold text-gray-900 mb-12">How It Works</h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-left">
           <div>
-            <h3 className="text-xl font-semibold mb-2">1. Start a Project</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900">1. Start a Project</h3>
             <p className="text-gray-800">Tell us what you need via quick guided questions.</p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-2">2. Get Instant Options</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900">2. Get Instant Options</h3>
             <p className="text-gray-800">AI package vs Vetted freelancer — pick your execution plan.</p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-2">3. Track and Get Delivered</h3>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900">3. Track and Get Delivered</h3>
             <p className="text-gray-800">Track progress and get results — fast, simple, efficient.</p>
           </div>
         </div>
