@@ -3,7 +3,8 @@
 import { useRef, useState } from 'react';
 
 export default function Home() {
-  const [messages, setMessages] = useState<{ role: 'user' | 'ai'; content: string }[]>([]);
+  type Message = { role: 'user' | 'ai'; content: string };
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [invoiceData, setInvoiceData] = useState<any>(null);
