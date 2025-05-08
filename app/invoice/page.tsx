@@ -156,6 +156,7 @@ export default function Home() {
               <button
                 className="bg-black text-white px-3 py-1 rounded"
                 onClick={() => {
+                  // @ts-ignore
                   import('html2pdf.js').then(({ default: html2pdf }) => {
                     html2pdf().from(previewRef.current).save();
                   });
