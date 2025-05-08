@@ -13,7 +13,7 @@ export default function Home() {
   const handleSend = async () => {
     if (!input.trim()) return;
 
-    const newMessages = [...messages, { role: 'user', content: input }];
+    const newMessages = [...messages, { role: 'user' as const, content: input }];
     setMessages(newMessages);
     setInput('');
 
