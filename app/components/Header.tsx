@@ -12,7 +12,7 @@ export default function Header() {
       <h1 className="text-lg font-bold font-heading">AI Wale</h1>
 
       {/* Desktop Nav */}
-      <nav className="hidden md:flex gap-6 text-sm font-body">
+      <nav className="hidden md:flex gap-6 text-sm font-body items-center">
         <a href="/" className="hover:underline">Home</a>
 
         {/* AI Tools Dropdown */}
@@ -22,12 +22,17 @@ export default function Header() {
           onMouseLeave={() => setShowDropdown(false)}
         >
           <button className="hover:underline">AI Tools</button>
-          {showDropdown && (
-            <div className="absolute bg-[#1A1A1A] mt-2 rounded shadow-lg p-2 space-y-1 text-sm z-50">
-              <a href="/invoice" className="block px-4 py-1 hover:bg-gray-800 rounded">Invoice Generator</a>
-              <a href="/poster" className="block px-4 py-1 hover:bg-gray-800 rounded">Poster Generator</a>
-            </div>
-          )}
+
+          <div
+            className={`absolute bg-[#1A1A1A] mt-2 rounded shadow-lg p-2 space-y-1 text-sm z-50 transition-opacity duration-200 ${
+              showDropdown ? 'opacity-100 visible' : 'opacity-0 invisible'
+            }`}
+            onMouseEnter={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
+          >
+            <a href="/invoice" className="block px-4 py-1 hover:bg-gray-800 rounded">Invoice Generator</a>
+            <a href="/poster" className="block px-4 py-1 hover:bg-gray-800 rounded">Poster Generator</a>
+          </div>
         </div>
 
         <a href="/#freelancers" className="hover:underline">AI Freelancers</a>
@@ -46,10 +51,9 @@ export default function Header() {
 
       {/* Mobile Nav Menu */}
       {showMobileMenu && (
-        <div className="absolute top-full left-0 w-full bg-[#1A1A1A] flex flex-col px-6 py-4 space-y-3 text-sm md:hidden">
+        <div className="absolute top-full left-0 w-full bg-[#1A1A1A] flex flex-col px-6 py-4 space-y-3 text-sm md:hidden z-50">
           <a href="/" onClick={() => setShowMobileMenu(false)}>Home</a>
 
-          {/* Mobile AI Tools Dropdown */}
           <div className="flex flex-col space-y-1">
             <span className="font-semibold">AI Tools</span>
             <a href="/invoice" onClick={() => setShowMobileMenu(false)} className="ml-4">↳ Invoice Generator</a>
