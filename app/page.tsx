@@ -16,52 +16,6 @@ export default function Home() {
 
   return (
     <main className="bg-white text-gray-900 font-body">
-      {/* Navbar */}
-      <header className="bg-[#1A1A1A] text-white px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold font-heading">AI Wale</h1>
-        <nav className="space-x-6 text-sm font-body">
-          <a href="#" className="hover:underline">Home</a>
-
-          {/* AI Tools Dropdown */}
-          <div
-            className="relative inline-block"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <button
-              onClick={() => setShowDropdown((prev) => !prev)}
-              className="hover:text-[#FFE01B] focus:outline-none text-sm font-body"
-            >
-              AI Tools
-            </button>
-
-            {showDropdown && (
-              <div className="absolute right-0 md:left-auto md:right-0 z-50 grid grid-cols-3 gap-6 text-black bg-white w-[1000px] p-6 mt-2 rounded-xl shadow-xl">
-                <div>
-                  <p className="font-semibold mb-2 text-[#1A1A1A]">📂 Business Setup</p>
-                  <a href="#" className="block hover:text-[#FFE01B] text-sm mb-1">Company Registration</a>
-                  <a href="#" className="block hover:text-[#FFE01B] text-sm mb-1">GST & PAN Application</a>
-                  <a href="/invoice" className="block hover:text-[#FFE01B] text-sm mb-1">Invoice Generation</a>
-                </div>
-                <div>
-                  <p className="font-semibold mb-2 text-[#1A1A1A]">🖥️ Website & Tech</p>
-                  <a href="#" className="block hover:text-[#FFE01B] text-sm mb-1">Landing Page Generator</a>
-                  <a href="#" className="block hover:text-[#FFE01B] text-sm mb-1">Website Copywriting</a>
-                </div>
-                <div>
-                  <p className="font-semibold mb-2 text-[#1A1A1A]">📢 Marketing</p>
-                  <a href="#" className="block hover:text-[#FFE01B] text-sm mb-1">Ad Copy Generator</a>
-                  <a href="#" className="block hover:text-[#FFE01B] text-sm mb-1">Social Media Calendar</a>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <a href="#" className="hover:underline">AI Freelancers</a>
-          <a href="#" className="hover:underline">General Freelancers</a>
-          <a href="#" className="hover:underline">Why us?</a>
-        </nav>
-      </header>
 
       {/* Hero Section */}
       <section className="bg-white text-center py-24 px-6">
