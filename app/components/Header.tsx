@@ -12,27 +12,32 @@ export default function Header() {
       <h1 className="text-lg font-bold font-heading">AI Wale</h1>
 
       {/* Desktop Nav */}
-      <nav className="hidden md:flex gap-6 text-sm font-body items-center">
+      <nav className="hidden md:flex gap-6 text-sm font-body items-center relative">
         <a href="/" className="hover:underline">Home</a>
 
-        {/* AI Tools Dropdown */}
-        <div
-          className="relative"
-          onMouseEnter={() => setShowDropdown(true)}
-          onMouseLeave={() => setShowDropdown(false)}
-        >
-          <button className="hover:underline">AI Tools</button>
+        {/* AI Tools Dropdown (Click to Toggle) */}
+        <div className="relative">
+          <button
+            className="hover:underline"
+            onClick={() => setShowDropdown(!showDropdown)}
+          >
+            AI Tools ▾
+          </button>
 
           {showDropdown && (
-            <div
-              className="absolute top-full left-0 bg-[#1A1A1A] mt-2 rounded shadow-lg p-2 space-y-1 text-sm z-50"
-              onMouseEnter={() => setShowDropdown(true)}
-              onMouseLeave={() => setShowDropdown(false)}
-            >
-              <a href="/invoice" className="block px-4 py-1 hover:bg-gray-800 rounded">
+            <div className="absolute left-0 top-full mt-2 bg-[#1A1A1A] rounded shadow-lg p-2 space-y-1 text-sm z-[100] min-w-[180px]">
+              <a
+                href="/invoice"
+                className="block px-4 py-2 hover:bg-gray-800 rounded"
+                onClick={() => setShowDropdown(false)}
+              >
                 Invoice Generator
               </a>
-              <a href="/poster" className="block px-4 py-1 hover:bg-gray-800 rounded">
+              <a
+                href="/poster"
+                className="block px-4 py-2 hover:bg-gray-800 rounded"
+                onClick={() => setShowDropdown(false)}
+              >
                 Poster Generator
               </a>
             </div>
