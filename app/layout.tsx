@@ -1,5 +1,6 @@
 import './globals.css';
 import { Roboto, Playfair_Display } from 'next/font/google';
+import Header from "./components/Header";
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -25,7 +26,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${roboto.variable} ${playfair.variable}`}>
-      <body className="font-body">{children}</body>
+      <body className="font-body">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
