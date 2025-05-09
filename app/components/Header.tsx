@@ -17,6 +17,7 @@ export default function Header() {
         <a href="/#freelancers">AI Freelancers</a>
         <a href="/#general">General Freelancers</a>
         <a href="/#why">Why us?</a>
+        <a href="/poster" className="hover:underline">Poster Generator</a> {/* ✅ new link */}
       </nav>
 
       {/* Mobile Hamburger Button */}
@@ -36,6 +37,7 @@ export default function Header() {
           <a href="/#freelancers" onClick={() => setShowMobileMenu(false)}>AI Freelancers</a>
           <a href="/#general" onClick={() => setShowMobileMenu(false)}>General Freelancers</a>
           <a href="/#why" onClick={() => setShowMobileMenu(false)}>Why us?</a>
+          <a href="/poster" onClick={() => setShowMobileMenu(false)}>Poster Generator</a> {/* ✅ new link */}
         </div>
       )}
     </header>
