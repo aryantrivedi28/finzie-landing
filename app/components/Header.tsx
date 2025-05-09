@@ -23,16 +23,20 @@ export default function Header() {
         >
           <button className="hover:underline">AI Tools</button>
 
-          <div
-            className={`absolute bg-[#1A1A1A] mt-2 rounded shadow-lg p-2 space-y-1 text-sm z-50 transition-opacity duration-200 ${
-              showDropdown ? 'opacity-100 visible' : 'opacity-0 invisible'
-            }`}
-            onMouseEnter={() => setShowDropdown(true)}
-            onMouseLeave={() => setShowDropdown(false)}
-          >
-            <a href="/invoice" className="block px-4 py-1 hover:bg-gray-800 rounded">Invoice Generator</a>
-            <a href="/poster" className="block px-4 py-1 hover:bg-gray-800 rounded">Poster Generator</a>
-          </div>
+          {showDropdown && (
+            <div
+              className="absolute top-full left-0 bg-[#1A1A1A] mt-2 rounded shadow-lg p-2 space-y-1 text-sm z-50"
+              onMouseEnter={() => setShowDropdown(true)}
+              onMouseLeave={() => setShowDropdown(false)}
+            >
+              <a href="/invoice" className="block px-4 py-1 hover:bg-gray-800 rounded">
+                Invoice Generator
+              </a>
+              <a href="/poster" className="block px-4 py-1 hover:bg-gray-800 rounded">
+                Poster Generator
+              </a>
+            </div>
+          )}
         </div>
 
         <a href="/#freelancers" className="hover:underline">AI Freelancers</a>
