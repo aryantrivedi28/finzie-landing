@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function Header() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   return (
     <header className="bg-[#1A1A1A] text-white px-4 py-3 flex items-center justify-between relative z-50">
@@ -13,17 +14,25 @@ export default function Header() {
       {/* Desktop Nav */}
       <nav className="hidden md:flex gap-6 text-sm font-body">
         <a href="/" className="hover:underline">Home</a>
-        <div className="relative group">
-  <button className="hover:underline">AI Tools</button>
-  <div className="absolute hidden group-hover:block bg-[#1A1A1A] mt-2 rounded shadow-lg p-2 space-y-1 text-sm z-50">
-    <a href="/invoice" className="block px-4 py-1 hover:bg-gray-800 rounded">Invoice Generator</a>
-    <a href="/poster" className="block px-4 py-1 hover:bg-gray-800 rounded">Poster Generator</a>
-  </div>
-</div>
-        <a href="/#freelancers">AI Freelancers</a>
-        <a href="/#general">General Freelancers</a>
-        <a href="/#why">Why us?</a>
-        <a href="/poster" className="hover:underline">Poster Generator</a> {/* ✅ new link */}
+
+        {/* AI Tools Dropdown */}
+        <div
+          className="relative"
+          onMouseEnter={() => setShowDropdown(true)}
+          onMouseLeave={() => setShowDropdown(false)}
+        >
+          <button className="hover:underline">AI Tools</button>
+          {showDropdown && (
+            <div className="absolute bg-[#1A1A1A] mt-2 rounded shadow-lg p-2 space-y-1 text-sm z-50">
+              <a href="/invoice" className="block px-4 py-1 hover:bg-gray-800 rounded">Invoice Generator</a>
+              <a href="/poster" className="block px-4 py-1 hover:bg-gray-800 rounded">Poster Generator</a>
+            </div>
+          )}
+        </div>
+
+        <a href="/#freelancers" className="hover:underline">AI Freelancers</a>
+        <a href="/#general" className="hover:underline">General Freelancers</a>
+        <a href="/#why" className="hover:underline">Why us?</a>
       </nav>
 
       {/* Mobile Hamburger Button */}
@@ -39,15 +48,17 @@ export default function Header() {
       {showMobileMenu && (
         <div className="absolute top-full left-0 w-full bg-[#1A1A1A] flex flex-col px-6 py-4 space-y-3 text-sm md:hidden">
           <a href="/" onClick={() => setShowMobileMenu(false)}>Home</a>
+
+          {/* Mobile AI Tools Dropdown */}
           <div className="flex flex-col space-y-1">
-  <span className="font-semibold">AI Tools</span>
-  <a href="/invoice" onClick={() => setShowMobileMenu(false)} className="ml-4">↳ Invoice Generator</a>
-  <a href="/poster" onClick={() => setShowMobileMenu(false)} className="ml-4">↳ Poster Generator</a>
-</div>
+            <span className="font-semibold">AI Tools</span>
+            <a href="/invoice" onClick={() => setShowMobileMenu(false)} className="ml-4">↳ Invoice Generator</a>
+            <a href="/poster" onClick={() => setShowMobileMenu(false)} className="ml-4">↳ Poster Generator</a>
+          </div>
+
           <a href="/#freelancers" onClick={() => setShowMobileMenu(false)}>AI Freelancers</a>
           <a href="/#general" onClick={() => setShowMobileMenu(false)}>General Freelancers</a>
           <a href="/#why" onClick={() => setShowMobileMenu(false)}>Why us?</a>
-          <a href="/poster" onClick={() => setShowMobileMenu(false)}>Poster Generator</a> {/* ✅ new link */}
         </div>
       )}
     </header>
