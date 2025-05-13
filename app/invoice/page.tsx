@@ -11,7 +11,7 @@ export default function InvoiceGenerator() {
 
   const handleSend = async () => {
     if (!input.trim()) return;
-    const newMessages = [...messages, { role: 'user', content: input }];
+    const newMessages: Message[] = [...messages, { role: 'user', content: input }];
     setMessages(newMessages);
     setInput('');
 
@@ -22,7 +22,8 @@ export default function InvoiceGenerator() {
     });
 
     const data = await res.json();
-    setMessages([...newMessages, { role: 'ai', content: data.result }]);
+    const aiMessage: Message = { role: 'ai', content: data.result };
+    setMessages([...newMessages, aiMessage]);
   };
 
   return (
